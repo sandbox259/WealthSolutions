@@ -8,24 +8,24 @@ import FadeIn from "@/components/FadeIn"
 export default function Services() {
   const services = [
     {
-      title: "Equities & Securities Education",
-      description: "Master the fundamentals of stock market investing. Learn about market mechanics, stock analysis, valuation techniques, and disciplined equity selection strategies.",
+      title: "Securities Market Education",
+      description: "Educational programs designed to improve understanding of financial markets and market behavior.",
     },
     {
-      title: "Commodity Market Mastery",
-      description: "Understand commodity markets including Gold and Silver. Learn about commodity price drivers, hedging strategies, and how to participate responsibly in commodity trading.",
+      title: "Commodity Market Learning",
+      description: "Structured frameworks focused on commodity markets including Gold and Silver."
     },
     {
-      title: "Risk & Portfolio Management",
-      description: "Build expertise in identifying, quantifying, and managing investment risk. Learn portfolio construction, diversification principles, and capital preservation strategies.",
+      title: "Risk & Capital Management Education",
+      description: "Programs focused on risk awareness, capital preservation concepts and disciplined market participation.",
     },
     {
-      title: "Technical & Fundamental Analysis",
-      description: "Develop skills in both technical and fundamental analysis frameworks. Learn chart patterns, indicators, financial statement analysis, and informed decision-making.",
+      title: "Financial Awareness Programs",
+      description: "Learning modules designed to improve overall financial understanding and decision-making.",
     },
     {
-      title: "Investment Psychology & Behavior",
-      description: "Understand the psychological aspects of investing. Learn how to manage emotions, avoid common biases, and develop disciplined decision-making habits.",
+      title: "Mentorship & Learning Support",
+      description: "Guided educational support to help learners understand concepts and frameworks effectively.",
     },
   ]
 
@@ -65,7 +65,7 @@ export default function Services() {
           <FadeIn>
             <div className="mb-12 md:mb-16">
               <h2 className="font-heading text-3xl md:text-5xl font-semibold text-[#1F3A5F] tracking-tight mb-6">
-                Our Programs
+                Our Services
               </h2>
               <div className="h-1 w-20 bg-[#D4AF37]" />
             </div>
@@ -81,7 +81,7 @@ export default function Services() {
                         {service.title}
                       </span>
                     </AccordionTrigger>
-                    <AccordionContent className="px-8 pb-6 text-[#1F3A5F]/80 leading-relaxed border-t border-[#E8E4DF]">
+                    <AccordionContent className="py-4 px-8 pb-4 text-[#1F3A5F]/80 leading-relaxed border-t border-[#E8E4DF]">
                       {service.description}
                     </AccordionContent>
                   </AccordionItem>

@@ -4,32 +4,28 @@ import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
 
 export default function Mentorship() {
-  const reasons = [
-    {
-      title: "Expert Mentorship",
-      description: "Learn from seasoned market professionals with real-world experience and proven track records in investment management."
-    },
-    {
-      title: "Structured Learning Framework",
-      description: "Our programs follow a systematic approach that builds knowledge progressively from fundamentals to advanced strategies."
-    },
-    {
-      title: "Practical Application",
-      description: "Beyond theory, we focus on real-world market scenarios, case studies, and hands-on practice with live market examples."
-    },
-    {
-      title: "Community Support",
-      description: "Join a community of disciplined learners. Network, discuss strategies, and grow together with like-minded investors."
-    },
-    {
-      title: "Lifetime Access",
-      description: "Get continuous access to updated materials, new market insights, and ongoing support even after program completion."
-    },
-    {
-      title: "Personalized Guidance",
-      description: "Our mentors provide personalized feedback on your learning progress and investment approach, tailored to your goals."
-    },
-  ]
+const reasons = [
+  {
+    title: "Structured Learning Approach",
+    description:
+      "Framework-based education rather than random information.",
+  },
+  {
+    title: "Practical Market Understanding",
+    description:
+      "Focused on real-world market behavior and concepts.",
+  },
+  {
+    title: "Mentorship Support",
+    description:
+      "Guided learning experience with continued support.",
+  },
+  {
+    title: "Long-Term Perspective",
+    description:
+      "Focused on knowledge, discipline and sustainable learning.",
+  },
+]
 
   const learningSteps = [
     { step: 1, title: "Foundation", description: "Learn core investment concepts and market fundamentals" },
@@ -65,10 +61,10 @@ export default function Mentorship() {
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {reasons.map((reason, index) => (
               <FadeIn key={index} delay={index * 0.1}>
-                <div className="border border-[#E8E4DF] rounded-lg p-8 hover:shadow-lg transition-shadow h-full">
+                <div className="rounded-lg p-8 hover:shadow-lg transition-shadow h-full">
                   <div className="w-12 h-12 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center font-bold text-lg mb-4">
                     {index + 1}
                   </div>
@@ -120,33 +116,45 @@ export default function Mentorship() {
                 </FadeIn>
               ))}
             </div>
+              {/* Desktop: Horizontal Flowchart */}
+              <div className="hidden md:block">
+                <div
+                  className="grid gap-0"
+                  style={{
+                    gridTemplateColumns: `repeat(${learningSteps.length}, minmax(0, 1fr))`,
+                  }}
+                >
+                  {learningSteps.map((item, index) => (
+                    <FadeIn
+                      key={index}
+                      delay={index * 0.1}
+                      className="h-full"
+                    >
+                      <div className="flex flex-col items-center h-full px-3">
+                        {/* Circle + connector lines */}
+                        <div className="relative w-full flex justify-center mb-4">
+                          
 
-            {/* Desktop: Horizontal Flowchart */}
-            <div className="hidden md:block">
-              <div className="flex items-center justify-between">
-                {learningSteps.map((item, index) => (
-                  <div key={index} className="flex items-center flex-1">
-                    <FadeIn delay={index * 0.1}>
-                      <div className="flex flex-col items-center w-full">
-                        <div className="w-14 h-14 rounded-full bg-[#D4AF37] text-[#1F3A5F] flex items-center justify-center font-bold text-xl mb-4 flex-shrink-0">
-                          {item.step}
+                          {/* Circle */}
+                          <div className="relative z-10 w-14 h-14 rounded-full bg-[#D4AF37] text-[#1F3A5F] flex items-center justify-center font-bold text-xl flex-shrink-0">
+                            {item.step}
+                          </div>
                         </div>
+
+                        {/* Title */}
                         <h3 className="font-heading text-base font-semibold text-[#1F3A5F] mb-2 text-center">
                           {item.title}
                         </h3>
-                        <p className="text-[#1F3A5F]/80 text-xs text-center">
+
+                        {/* Description */}
+                        <p className="text-[#1F3A5F]/80 text-xs text-center leading-relaxed">
                           {item.description}
                         </p>
                       </div>
                     </FadeIn>
-
-                    {index < learningSteps.length - 1 && (
-                      <div className="h-1 bg-[#D4AF37]/30 mx-2 flex-1" />
-                    )}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </section>

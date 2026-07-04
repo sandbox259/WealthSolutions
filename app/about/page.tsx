@@ -27,7 +27,9 @@ export default function About() {
                   Our Vision
                 </h2>
                 <p className="text-[#1F3A5F]/80 leading-relaxed mb-8">
-                  To be the most trusted investment education platform empowering millions of Indians to make informed financial decisions and build sustainable wealth through market knowledge and disciplined investing.
+                To become a trusted platform for financial education and market learning by empowering
+                individuals with practical knowledge, disciplined thinking and framework-based
+                understanding
                 </p>
                 <ul className="space-y-3 text-[#1F3A5F]/80">
                   <li className="flex gap-3">

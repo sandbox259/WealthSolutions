@@ -10,7 +10,7 @@ export default function Home() {
       <section className="relative text-white min-h-[70vh] md:min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/uwshome2.jpeg"
+            src="/forex.jpg"
             alt="Investment learning journey"
             fill
             priority
@@ -25,7 +25,7 @@ export default function Home() {
               Educate • Empower • Elevate
             </h1>
             <p className="text-base sm:text-lg text-gray-100 leading-relaxed max-w-2xl mb-10 md:mb-12">
-              Premium investment education and market learning solutions for disciplined wealth building. Master the fundamentals before making decisions that matter.
+              Helping individuals develop financial awareness, market understanding and disciplined decisionmaking through structured educational programs across securities markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <Link
@@ -55,14 +55,21 @@ export default function Home() {
                   Who We Are
                 </h2>
                 <p className="text-[#1F3A5F] font-semibold mb-5 md:mb-6">
-                  Nivesh Nirnay Solutions is a premium investment education and market learning organization dedicated to empowering individuals with the knowledge to invest wisely.
+                  My Wealth Solution is a financial education and market learning organization committed to
+                  helping individuals understand various segments of the securities market through structured
+                  educational frameworks.
                 </p>
                 <div className="space-y-5 md:space-y-6 text-[#1F3A5F]/80 leading-relaxed max-w-xl">
                   <p>
-                    We believe that financial success begins with education. Our structured programs teach market fundamentals, risk management, and disciplined investment strategies.
+                    Our focus is not on shortcuts or speculation, but on developing knowledge, discipline and
+                    practical market understanding that supports long-term financial growth.
                   </p>
                   <p>
                     Our motto "Learn First. Invest Later." reflects our commitment to building informed investors who understand the markets before deploying capital.
+                  </p>
+                  <p>
+                    We believe that informed decisions come from education, structured thinking and continuous
+                    learning.
                   </p>
                 </div>
               </div>
@@ -70,7 +77,7 @@ export default function Home() {
             <FadeIn delay={0.2}>
               <div className="relative h-[280px] sm:h-[360px] md:h-[420px] w-full">
                 <Image
-                  src="/Philosophy.jpeg"
+                  src="/Investing.jpg"
                   alt="Investment education"
                   fill
                   className="object-cover rounded-2xl"
