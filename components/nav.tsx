@@ -10,19 +10,20 @@ export function Nav() {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/philosophy', label: 'Philosophy' },
     { href: '/services', label: 'Services' },
-    { href: '/team', label: 'Team' },
+    { href: '/programs', label: 'Programs' },
+    { href: '/mentorship', label: 'Mentorship' },
+    { href: '/testimonials', label: 'Testimonials' },
     { href: '/contact', label: 'Contact' },
   ]
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#F5F7FA] border-b border-[#E8EBF0]">
+    <nav className="sticky top-0 z-50 bg-[#F9F7F4] border-b border-[#E8E4DF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image
             src="/logo.jpeg"
-            alt="My Wealth Solutions"
+            alt="Nivesh Nirnay Solutions"
             width={180}
             height={40}
             priority
@@ -35,7 +36,7 @@ export function Nav() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[#1A1F2E] hover:text-[#16A39E] transition-colors text-sm font-medium"
+              className="text-[#1F3A5F] hover:text-[#D4AF37] transition-colors text-sm font-medium"
             >
               {item.label}
             </Link>
@@ -45,7 +46,7 @@ export function Nav() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-[#1B4965]"
+          className="md:hidden text-[#1F3A5F]"
           aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,13 +57,13 @@ export function Nav() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-[#E8EBF0]">
+        <div className="md:hidden bg-white border-t border-[#E8E4DF]">
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block text-[#1A1F2E] hover:text-[#16A39E] transition-colors text-sm font-medium py-2"
+                className="block text-[#1F3A5F] hover:text-[#D4AF37] transition-colors text-sm font-medium py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

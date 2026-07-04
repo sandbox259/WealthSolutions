@@ -8,7 +8,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
+    subject: "",
     message: "",
   })
 
@@ -27,93 +27,86 @@ export default function Contact() {
     e.preventDefault()
     console.log("Form submitted:", formData)
     setSubmitted(true)
-    setFormData({ name: "", email: "", company: "", message: "" })
+    setFormData({ name: "", email: "", subject: "", message: "" })
     setTimeout(() => setSubmitted(false), 5000)
   }
 
   return (
     <div>
-
       {/* HERO */}
-      <section className="bg-gradient-to-b from-[#1B4965] to-[#3E7C8F] text-white py-16 md:py-24">
+      <section className="bg-gradient-to-b from-[#1F3A5F] to-[#2D4A6F] text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h1 className="font-heading text-4xl md:text-6xl font-semibold tracking-tight mb-6">
             Get in Touch
           </h1>
-          <p className="text-gray-100 max-w-2xl">
-            Let's discuss how our educational programs can help you build disciplined market knowledge.
+          <p className="text-gray-200 max-w-2xl">
+            Have questions? We'd love to hear from you. Reach out to learn more about our programs and mentorship.
           </p>
         </div>
       </section>
 
-      {/* MAIN CONTACT SECTION */}
+      {/* CONTACT SECTION */}
       <section className="bg-white py-16 md:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-
-          <div className="grid md:grid-cols-2 gap-16">
-
-            {/* LEFT COLUMN — CONTEXT */}
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+            {/* LEFT - INFO */}
             <FadeIn>
               <div className="space-y-10">
-
                 <div>
-                  <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[#1B4965] mb-6">
-                    Get in Touch With Us
+                  <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[#1F3A5F] mb-6">
+                    We're Here to Help
                   </h2>
-
-                  <div className="space-y-6 text-[#1A1F2E] leading-relaxed">
+                  <div className="space-y-6 text-[#1F3A5F]/80 leading-relaxed">
                     <p>
-                      <span className="font-semibold text-[#3E7C8F]">
-                        Interested in learning?
-                      </span>{" "}
-                      Tell us which programs interest you and your learning goals.
+                      <span className="font-semibold text-[#1F3A5F]">Interested in our programs?</span> Tell us which investment education path interests you and we'll provide more details.
                     </p>
-
                     <p>
-                      <span className="font-semibold text-[#3E7C8F]">
-                        Corporate training?
-                      </span>{" "}
-                      We offer customized programs for teams and organizations.
+                      <span className="font-semibold text-[#1F3A5F]">Corporate training?</span> We offer customized investment education programs for organizations and teams.
                     </p>
-
                     <p>
-                      <span className="font-semibold text-[#3E7C8F]">
-                        General inquiry?
-                      </span>{" "}
-                      We welcome questions about financial education and market learning.
+                      <span className="font-semibold text-[#1F3A5F]">General inquiries?</span> We'd love to discuss how Nivesh Nirnay Solutions can help your financial learning journey.
                     </p>
                   </div>
                 </div>
 
-                <div className="border-t border-[#E8EBF0] pt-8">
-                  <p className="text-[#1A1F2E] leading-relaxed">
-                    All inquiries are treated confidentially. We'll respond within 24-48 hours.
+                <div className="border-t border-[#E8E4DF] pt-8">
+                  <p className="text-[#1F3A5F]/80">
+                    We typically respond to all inquiries within 24-48 hours. Thank you for your interest in disciplined investment education.
                   </p>
                 </div>
 
+                {/* Contact Details */}
+                <div className="space-y-4 pt-4">
+                  <div>
+                    <p className="text-sm text-[#1F3A5F]/60">Email</p>
+                    <p className="text-[#1F3A5F] font-semibold">hello@niveshnirnay.com</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-[#1F3A5F]/60">Phone</p>
+                    <p className="text-[#1F3A5F] font-semibold">+91 XXXXXXXXXX</p>
+                  </div>
+                </div>
               </div>
             </FadeIn>
 
-            {/* RIGHT COLUMN — FORM */}
+            {/* RIGHT - FORM */}
             <FadeIn delay={0.1}>
-              <div className="bg-[#F5F7FA] rounded-2xl p-8 md:p-10 shadow-sm">
-
-                <h2 className="font-heading text-2xl font-semibold text-[#1B4965] mb-8">
-                  Send a Message
+              <div className="bg-[#F9F7F4] rounded-2xl p-8 md:p-10">
+                <h2 className="font-heading text-2xl font-semibold text-[#1F3A5F] mb-8">
+                  Send us a Message
                 </h2>
 
                 {submitted && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded">
                     <p className="text-green-800 text-sm">
-                      Thank you for reaching out. We will respond shortly.
+                      Thank you for reaching out. We'll get back to you soon.
                     </p>
                   </div>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-
                   <div>
-                    <label className="block text-sm font-medium text-[#1B4965] mb-2">
+                    <label className="block text-sm font-medium text-[#1F3A5F] mb-2">
                       Full Name *
                     </label>
                     <input
@@ -122,12 +115,13 @@ export default function Contact() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-[#E8EBF0] rounded focus:outline-none focus:border-[#16A39E]"
+                      className="w-full px-4 py-3 border border-[#E8E4DF] rounded-lg focus:outline-none focus:border-[#D4AF37] bg-white"
+                      placeholder="Your name"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1B4965] mb-2">
+                    <label className="block text-sm font-medium text-[#1F3A5F] mb-2">
                       Email *
                     </label>
                     <input
@@ -136,26 +130,28 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-[#E8EBF0] rounded focus:outline-none focus:border-[#16A39E]"
+                      className="w-full px-4 py-3 border border-[#E8E4DF] rounded-lg focus:outline-none focus:border-[#D4AF37] bg-white"
+                      placeholder="your@email.com"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1B4965] mb-2">
-                      Interested Programs
+                    <label className="block text-sm font-medium text-[#1F3A5F] mb-2">
+                      Subject *
                     </label>
                     <input
                       type="text"
-                      name="company"
-                      value={formData.company}
+                      name="subject"
+                      required
+                      value={formData.subject}
                       onChange={handleChange}
-                      placeholder="e.g., Bullion Blueprint, Securities Education"
-                      className="w-full px-4 py-3 border border-[#E8EBF0] rounded focus:outline-none focus:border-[#16A39E]"
+                      className="w-full px-4 py-3 border border-[#E8E4DF] rounded-lg focus:outline-none focus:border-[#D4AF37] bg-white"
+                      placeholder="What's this about?"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1B4965] mb-2">
+                    <label className="block text-sm font-medium text-[#1F3A5F] mb-2">
                       Message *
                     </label>
                     <textarea
@@ -164,48 +160,47 @@ export default function Contact() {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-[#E8EBF0] rounded focus:outline-none focus:border-[#16A39E]"
+                      className="w-full px-4 py-3 border border-[#E8E4DF] rounded-lg focus:outline-none focus:border-[#D4AF37] bg-white"
+                      placeholder="Tell us more..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3 bg-[#1B4965] text-white font-medium hover:bg-[#3E7C8F] transition-colors"
+                    className="w-full py-3 bg-[#1F3A5F] text-white font-medium rounded-lg hover:bg-[#2D4A6F] transition-colors"
                   >
                     Send Message
                   </button>
 
-                  <p className="text-xs text-center text-[#1A1F2E]/70">
+                  <p className="text-xs text-center text-[#1F3A5F]/60">
                     Your information will remain confidential.
                   </p>
-
                 </form>
               </div>
             </FadeIn>
-
           </div>
-
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="bg-[#1B4965] text-white py-16 md:py-24">
+      {/* CTA */}
+      <section className="bg-[#1F3A5F] text-white py-16 md:py-24">
         <FadeIn>
           <div className="max-w-3xl mx-auto text-center px-6">
             <h2 className="font-heading text-2xl md:text-4xl font-semibold tracking-tight mb-6">
-              Ready to transform your financial knowledge?
+              Ready to Start Learning?
             </h2>
-
+            <p className="text-gray-200 mb-8 md:mb-10">
+              Explore our programs and join thousands of disciplined investors.
+            </p>
             <Link
-              href="/services"
-              className="inline-block px-8 py-3 bg-[#16A39E] text-white font-medium hover:bg-[#0D8A83] transition-colors"
+              href="/programs"
+              className="inline-block px-8 py-3 bg-[#D4AF37] text-[#1F3A5F] font-medium hover:bg-[#E8CFA0] transition-colors"
             >
-              Explore Our Programs
+              View All Programs
             </Link>
           </div>
         </FadeIn>
       </section>
-
     </div>
   )
 }
