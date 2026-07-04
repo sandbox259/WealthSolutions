@@ -12,8 +12,8 @@ const inter = Montserrat({ subsets: ["latin"], variable: '--font-sans' });
 const playfair = Questrial({ weight: '400', subsets: ["latin"], variable: '--font-heading' });
 
 export const metadata: Metadata = {
-  title: 'Unity Wealth Solutions | Investment Banking & Corporate Advisory',
-  description: 'India-focused investment banking and corporate advisory firm connecting ambition to capital.',
+  title: 'My Wealth Solutions | Financial Education & Market Learning',
+  description: 'Structured financial education and market learning programs. Learn about securities markets, commodities, and build disciplined wealth knowledge.',
   generator: 'v0.app',
   icons: {
     icon: [
