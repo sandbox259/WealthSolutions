@@ -12,25 +12,25 @@ const inter = Montserrat({ subsets: ["latin"], variable: '--font-sans' });
 const playfair = Questrial({ weight: '400', subsets: ["latin"], variable: '--font-heading' });
 
 export const metadata: Metadata = {
-  title: 'Unity Wealth Solutions | Investment Banking & Corporate Advisory',
-  description: 'India-focused investment banking and corporate advisory firm connecting ambition to capital.',
+  title: 'Nivesh Nirnay Solutions | Investment Education & Market Learning',
+  description: 'Learn First. Invest Later. Premium investment education and market learning solutions for disciplined wealth building.',
   generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/logo.jpeg',
+        url: '/logo1.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/logo.jpeg',
+        url: '/logo1.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/logo.jpeg',
+        url: '/logo1.png',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/logo.jpeg',
+    apple: '/logo1.png',
   },
 }
 
