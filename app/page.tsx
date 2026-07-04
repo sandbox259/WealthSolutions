@@ -22,7 +22,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <p className="text-sm md:text-base text-[#D4AF37] font-semibold uppercase tracking-widest mb-4 md:mb-6">Nivesh Nirnay Solutions</p>
             <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-tight mb-4 md:mb-6">
-              Learn First. Invest Later.
+              Educate • Empower • Elevate
             </h1>
             <p className="text-base sm:text-lg text-gray-100 leading-relaxed max-w-2xl mb-10 md:mb-12">
               Premium investment education and market learning solutions for disciplined wealth building. Master the fundamentals before making decisions that matter.
