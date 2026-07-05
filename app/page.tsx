@@ -10,7 +10,7 @@ export default function Home() {
       <section className="relative text-white min-h-[70vh] md:min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/forex.jpg"
+            src="/chart.jpg"
             alt="Investment learning journey"
             fill
             priority
