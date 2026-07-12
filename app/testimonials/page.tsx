@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
+import { FaYoutube } from "react-icons/fa6"
 
 export default function Testimonials() {
   return (
@@ -14,9 +15,7 @@ export default function Testimonials() {
           </h1>
 
           <p className="text-gray-200 max-w-2xl">
-            Discover how our students are building confidence,
-            discipline, and long-term investing skills through
-            structured financial education.
+            Hear from our communityof disciplined investors who transformed their financial future.
           </p>
         </div>
       </section>
@@ -40,14 +39,17 @@ export default function Testimonials() {
 
                 <p className="text-[#1F3A5F]/80 text-lg leading-relaxed">
                   Nothing speaks louder than genuine client
-                  experiences. Our YouTube channel is where we
-                  share educational content, market insights,
-                  and our upcoming testimonial series,
-                  showcasing real learning journeys from the
-                  Nivesh Nirnay Solutions community.
+                  experiences.
                 </p>
 
-                <div className="mt-10 space-y-5">
+                <p className="text-[#1F3A5F]/80 text-lg leading-relaxed mt-6">
+                 Explore our collection of live video testimonials to hear directly from individuals who have experienced the educational support of Nivesh Nirnay Solutions. Discover how structured learning, disciplined decision-making, and a systematic approach have helped them to become more confident traders.
+                </p>
+
+                <p className="text-[#1F3A5F]/80 text-lg leading-relaxed mt-6">
+                Real people. Real experiences. Honest feedback.
+                </p>
+                {/* <div className="mt-10 space-y-5">
 
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 rounded-full bg-[#D4AF37]" />
@@ -70,7 +72,7 @@ export default function Testimonials() {
                     </span>
                   </div>
 
-                </div>
+                </div> */}
 
               </div>
             </FadeIn>
@@ -82,7 +84,7 @@ export default function Testimonials() {
                 <div className="flex flex-col items-center text-center">
 
                   {/* YouTube Icon */}
-                  <div className="w-24 h-24 rounded-full bg-[#D4AF37] flex items-center justify-center mb-8">
+                  {/* <div className="w-24 h-24 rounded-full bg-[#D4AF37] flex items-center justify-center mb-8">
 
                     <svg
                       className="w-11 h-11 text-[#1F3A5F]"
@@ -92,18 +94,23 @@ export default function Testimonials() {
                       <path d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.6 32.6 0 0 0 0 12a32.6 32.6 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c2 .5 9.3.5 9.3.5s7.3 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.6 32.6 0 0 0 24 12a32.6 32.6 0 0 0-.5-5.8ZM9.6 15.5V8.5L15.8 12Z" />
                     </svg>
 
+                  </div> */}
+
+                  {/* YouTube Icon */}
+                  <div className="w-24 h-24 rounded-full bg-[#D4AF37]/15 flex items-center justify-center mb-8">
+                    <FaYoutube
+                      className="w-11 h-11 text-[#1F3A5F]"
+                    />
                   </div>
 
                   <h3 className="font-heading text-3xl font-semibold text-[#1F3A5F] mb-5">
-                    Visit Our Official
-                    <br />
-                    YouTube Channel
+                    Explore Our Testimonial Series on Youtube
+                    {/* <br />
+                    YouTube Channel */}
                   </h3>
 
                   <p className="text-[#1F3A5F]/75 leading-8 mb-10">
-                    Subscribe for educational content,
-                    market insights, investing concepts,
-                    and our upcoming testimonial videos.
+                      Explore our YouTube Testimonial Series to hear authentic feedback and discover real learning journeys with Nivesh Nirnay Solutions. Click the button below to watch the complete series.
                   </p>
 
                   <a
@@ -112,7 +119,7 @@ export default function Testimonials() {
                     rel="noopener noreferrer"
                     className="inline-block w-full sm:w-auto px-8 py-3 bg-[#D4AF37] text-[#1F3A5F] font-medium hover:bg-[#E8CFA0] transition-colors"
                   >
-                    Visit Our YouTube Channel
+                    Watch Testimonial Series
                   </a>
 
                 </div>

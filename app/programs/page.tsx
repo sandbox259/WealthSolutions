@@ -2,6 +2,8 @@
 
 import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
+import { ArrowRight } from "lucide-react"
+import { FaWhatsapp, FaInstagram} from "react-icons/fa6"
 
 export default function Programs() {
   const featuredPrograms = [
@@ -96,6 +98,134 @@ export default function Programs() {
           </div>
         </div>
       </section>
+
+      {/* FREE LEARNING RESOURCES */}
+{/* FREE LEARNING */}
+<section className="bg-[#F9F7F4] py-16 md:py-28">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <FadeIn>
+      <div className="max-w-3xl mb-12 md:mb-16">
+        <h2 className="font-heading text-3xl md:text-5xl font-semibold text-[#1F3A5F] tracking-tight mb-6">
+          Continue Learning for Free
+        </h2>
+
+        <div className="h-1 w-20 bg-[#D4AF37] mb-8" />
+
+        <p className="text-[#1F3A5F]/80 text-lg leading-relaxed">
+          Your learning journey doesn't end with our programs. Explore our
+          free educational platforms for regular market insights, investing
+          concepts, financial education, and practical knowledge designed to
+          help you become a disciplined investor.
+        </p>
+      </div>
+    </FadeIn>
+
+    <FadeIn delay={0.15}>
+      <div className="bg-white border border-[#E8E4DF] rounded-3xl p-8 md:p-12 shadow-sm hover:shadow-xl transition-all duration-300">
+
+        <div className="grid md:grid-cols-2 gap-10">
+
+          {/* WhatsApp */}
+          <div className="flex flex-col">
+
+            <div className="flex items-center gap-4 mb-6">
+
+              <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center">
+
+                  <FaWhatsapp className="w-8 h-8 text-[#1F3A5F]" />
+
+              </div>
+
+              <div>
+
+                <h3 className="font-heading text-2xl font-semibold text-[#1F3A5F]">
+                  WhatsApp Channel
+                </h3>
+
+                <p className="text-[#1F3A5F]/60">
+                  Daily Educational Updates
+                </p>
+
+              </div>
+
+            </div>
+
+            <p className="text-[#1F3A5F]/80 leading-8 flex-grow">
+              Receive bite-sized investing lessons, market observations,
+              educational resources, and important updates directly on
+              WhatsApp.
+            </p>
+
+            <a
+              href="https://whatsapp.com/channel/0029Vb841AKKQuJM0gLN1J3d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-8 text-[#1F3A5F] font-medium hover:text-[#D4AF37] transition-colors"
+            >
+              Join Channel
+
+              <ArrowRight className="w-4 h-4" />
+
+            </a>
+
+          </div>
+
+          {/* Divider */}
+          <div className="hidden md:block absolute"></div>
+
+          {/* Instagram */}
+          <div className="flex flex-col md:border-l md:border-[#E8E4DF] md:pl-10">
+
+            <div className="flex items-center gap-4 mb-6">
+
+              <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center">
+
+                  <FaInstagram className="w-8 h-8 text-[#1F3A5F]" />
+
+              </div>
+
+              <div>
+
+                <h3 className="font-heading text-2xl font-semibold text-[#1F3A5F]">
+                  Instagram
+                </h3>
+
+                <p className="text-[#1F3A5F]/60">
+                  Visual Learning Content
+                </p>
+
+              </div>
+
+            </div>
+
+            <p className="text-[#1F3A5F]/80 leading-8 flex-grow">
+              Explore educational reels, investing concepts, market
+              explainers, and practical financial content designed for
+              continuous learning.
+            </p>
+
+            <a
+              href="https://www.instagram.com/niveshnirnaysolutions"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-8 text-[#1F3A5F] font-medium hover:text-[#D4AF37] transition-colors"
+            >
+              Follow on Instagram
+
+              <ArrowRight className="w-4 h-4" />
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </FadeIn>
+
+  </div>
+</section>
 
       {/* COMING SOON PROGRAMS */}
       <section className="bg-[#F9F7F4] py-16 md:py-28">
