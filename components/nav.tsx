@@ -22,7 +22,7 @@ export function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo1.png"
+            src="/niveshlogo.png"
             alt="Nivesh Nirnay Solutions"
             width={120}
             height={40}

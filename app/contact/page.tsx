@@ -79,11 +79,11 @@ export default function Contact() {
                 <div className="space-y-4 pt-4">
                   <div>
                     <p className="text-sm text-[#1F3A5F]/60">Email</p>
-                    <p className="text-[#1F3A5F] font-semibold">hello@niveshnirnay.com</p>
+                    <p className="text-[#1F3A5F] font-semibold">niveshnirnaysolutions@gmail.com</p>
                   </div>
                   <div>
                     <p className="text-sm text-[#1F3A5F]/60">Phone</p>
-                    <p className="text-[#1F3A5F] font-semibold">+91 XXXXXXXXXX</p>
+                    <p className="text-[#1F3A5F] font-semibold">+91 8169305380</p>
                   </div>
                 </div>
               </div>

@@ -2,278 +2,202 @@
 
 import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
-import { useState } from "react"
 
 export default function Testimonials() {
-  const [activeIndex, setActiveIndex] = useState(0)
-
-  const testimonials = [
-    {
-      name: "Rajesh Patel",
-      title: "Software Engineer",
-      location: "Bangalore",
-      rating: 5,
-      text: "Nivesh Nirnay Solutions transformed my approach to investing. The structured framework and expert mentoring gave me the confidence to invest with discipline. Best decision for my financial future.",
-    },
-    {
-      name: "Priya Sharma",
-      title: "Business Owner",
-      location: "Mumbai",
-      rating: 5,
-      text: "The programs are incredibly comprehensive. I went from complete beginner to understanding market fundamentals in just weeks. The 'Learn First. Invest Later.' philosophy is brilliant.",
-    },
-    {
-      name: "Amit Kumar",
-      title: "Finance Professional",
-      location: "Delhi",
-      rating: 5,
-      text: "Even with finance experience, I learned so much from these programs. The focus on discipline and long-term thinking aligns perfectly with my investment philosophy.",
-    },
-    {
-      name: "Neha Singh",
-      title: "Entrepreneur",
-      location: "Pune",
-      rating: 5,
-      text: "The mentorship support is exceptional. Having someone guide me through my learning journey made all the difference. Highly recommend to anyone serious about investing.",
-    },
-    {
-      name: "Vikram Desai",
-      title: "Corporate Professional",
-      location: "Ahmedabad",
-      rating: 5,
-      text: "The practical case studies and real-world examples made complex concepts easy to understand. This is investment education done right.",
-    },
-    {
-      name: "Anjali Kapoor",
-      title: "Teacher",
-      location: "Hyderabad",
-      rating: 5,
-      text: "A life-changing experience. The programs taught me not just about markets, but about financial discipline and long-term thinking. Thank you, Nivesh Nirnay!",
-    },
-  ]
-
-  const nextTestimonial = () => {
-    setActiveIndex(
-      (prevIndex) => (prevIndex + 1) % testimonials.length
-    )
-  }
-
-  const prevTestimonial = () => {
-    setActiveIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + testimonials.length) % testimonials.length
-    )
-  }
-
   return (
     <div>
       {/* HERO */}
       <section className="bg-gradient-to-b from-[#1F3A5F] to-[#2D4A6F] text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h1 className="font-heading text-4xl md:text-6xl font-semibold tracking-tight mb-4">
-            Student Testimonials
+          <h1 className="font-heading text-4xl md:text-6xl font-semibold tracking-tight mb-6">
+            Success Stories
           </h1>
 
           <p className="text-gray-200 max-w-2xl">
-            Hear from our community of disciplined investors who transformed
-            their financial future.
+            Discover how our students are building confidence,
+            discipline, and long-term investing skills through
+            structured financial education.
           </p>
         </div>
       </section>
 
-      {/* TESTIMONIAL CAROUSEL */}
-      <section className="py-16 md:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <FadeIn>
-            <div className="relative">
-              {/* Main Testimonial Card */}
-              <div className="bg-gradient-to-br from-[#1F3A5F] to-[#2D4A6F] text-white rounded-lg p-6 sm:p-8 md:p-12 mb-8 shadow-lg">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonials[activeIndex].rating)].map(
-                    (_, i) => (
-                      <span
-                        key={i}
-                        className="text-[#D4AF37] text-xl"
-                      >
-                        ★
-                      </span>
-                    )
-                  )}
-                </div>
-
-                <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 italic">
-                  "{testimonials[activeIndex].text}"
-                </p>
-
-                <div className="border-t border-white/20 pt-6">
-                  <p className="font-heading text-lg font-semibold mb-1">
-                    {testimonials[activeIndex].name}
-                  </p>
-
-                  <p className="text-gray-300 text-sm">
-                    {testimonials[activeIndex].title} •{" "}
-                    {testimonials[activeIndex].location}
-                  </p>
-                </div>
-              </div>
-
-              {/* Navigation Buttons */}
-              <div className="flex justify-between items-center gap-3">
-                <button
-                  onClick={prevTestimonial}
-                  className="flex-shrink-0 bg-[#D4AF37] text-[#1F3A5F] p-2.5 sm:p-3 rounded-full hover:bg-[#E8CFA0] transition-colors"
-                  aria-label="Previous testimonial"
-                >
-                  <svg
-                    className="w-5 h-5 sm:w-6 sm:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 19l-7-7 7-7"
-                    />
-                  </svg>
-                </button>
-
-                {/* Dots */}
-                <div className="flex items-center justify-center gap-1.5 sm:gap-2 min-w-0">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveIndex(index)}
-                      className={`h-2 rounded-full transition-all ${
-                        index === activeIndex
-                          ? "bg-[#D4AF37] w-6 sm:w-8"
-                          : "bg-[#E8E4DF] w-2"
-                      }`}
-                      aria-label={`Go to testimonial ${index + 1}`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={nextTestimonial}
-                  className="flex-shrink-0 bg-[#D4AF37] text-[#1F3A5F] p-2.5 sm:p-3 rounded-full hover:bg-[#E8CFA0] transition-colors"
-                  aria-label="Next testimonial"
-                >
-                  <svg
-                    className="w-5 h-5 sm:w-6 sm:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Testimonial Stats */}
-          <FadeIn delay={0.2}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-[#E8E4DF]">
-              <div className="text-center">
-                <p className="font-heading text-4xl font-bold text-[#1F3A5F] mb-2">
-                  1000+
-                </p>
-                <p className="text-[#1F3A5F]/80">
-                  Students Empowered
-                </p>
-              </div>
-
-              <div className="text-center">
-                <p className="font-heading text-4xl font-bold text-[#1F3A5F] mb-2">
-                  4.9/5
-                </p>
-                <p className="text-[#1F3A5F]/80">
-                  Average Rating
-                </p>
-              </div>
-
-              <div className="text-center">
-                <p className="font-heading text-4xl font-bold text-[#1F3A5F] mb-2">
-                  95%
-                </p>
-                <p className="text-[#1F3A5F]/80">
-                  Completion Rate
-                </p>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* TESTIMONIAL GRID */}
-      <section className="bg-[#F9F7F4] py-16 md:py-28">
+      {/* YOUTUBE SECTION */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="font-heading text-3xl md:text-5xl font-semibold text-[#1F3A5F] tracking-tight mb-12 text-center">
-              What Our Students Say
-            </h2>
-          </FadeIn>
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-            {testimonials.map((testimonial, index) => (
-              <FadeIn
-                key={index}
-                delay={index * 0.1}
-                className="h-full"
-              >
-                <div className="bg-white border border-[#E8E4DF] rounded-lg p-6 sm:p-8 h-full flex flex-col">
-                  {/* Rating */}
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span
-                        key={i}
-                        className="text-[#D4AF37]"
-                      >
-                        ★
-                      </span>
-                    ))}
+            {/* LEFT COLUMN */}
+            <FadeIn>
+              <div>
+
+                <h2 className="font-heading text-3xl md:text-5xl font-semibold text-[#1F3A5F] tracking-tight mb-6">
+                  Real Stories.
+                  <br />
+                  Real Growth.
+                  <br />
+                  Real Results.
+                </h2>
+
+                <p className="text-[#1F3A5F]/80 text-lg leading-relaxed">
+                  Nothing speaks louder than genuine client
+                  experiences. Our YouTube channel is where we
+                  share educational content, market insights,
+                  and our upcoming testimonial series,
+                  showcasing real learning journeys from the
+                  Nivesh Nirnay Solutions community.
+                </p>
+
+                <div className="mt-10 space-y-5">
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-[#D4AF37]" />
+                    <span className="text-[#1F3A5F]/80 leading-tight">
+                      Educational Videos
+                    </span>
                   </div>
 
-                  {/* Testimonial Text */}
-                  <p className="text-[#1F3A5F]/80 text-sm leading-relaxed mb-6 flex-1">
-                    "{testimonial.text}"
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-[#D4AF37]" />
+                    <span className="text-[#1F3A5F]/80">
+                      Market Insights
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-[#D4AF37]" />
+                    <span className="text-[#1F3A5F]/80">
+                      Upcoming Testimonial Series
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+            </FadeIn>
+
+            {/* RIGHT COLUMN */}
+            <FadeIn delay={0.15}>
+              <div className="rounded-3xl border border-[#E8E4DF] bg-[#F9F7F4] p-12 shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+
+                <div className="flex flex-col items-center text-center">
+
+                  {/* YouTube Icon */}
+                  <div className="w-24 h-24 rounded-full bg-[#D4AF37] flex items-center justify-center mb-8">
+
+                    <svg
+                      className="w-11 h-11 text-[#1F3A5F]"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.6 32.6 0 0 0 0 12a32.6 32.6 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c2 .5 9.3.5 9.3.5s7.3 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.6 32.6 0 0 0 24 12a32.6 32.6 0 0 0-.5-5.8ZM9.6 15.5V8.5L15.8 12Z" />
+                    </svg>
+
+                  </div>
+
+                  <h3 className="font-heading text-3xl font-semibold text-[#1F3A5F] mb-5">
+                    Visit Our Official
+                    <br />
+                    YouTube Channel
+                  </h3>
+
+                  <p className="text-[#1F3A5F]/75 leading-8 mb-10">
+                    Subscribe for educational content,
+                    market insights, investing concepts,
+                    and our upcoming testimonial videos.
                   </p>
 
-                  {/* Student Information */}
-                  <div className="mt-auto">
-                    <p className="font-semibold text-[#1F3A5F] text-sm">
-                      {testimonial.name}
-                    </p>
+                  <a
+                    href="https://www.youtube.com/@niveshnirnaysolutions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block w-full sm:w-auto px-8 py-3 bg-[#D4AF37] text-[#1F3A5F] font-medium hover:bg-[#E8CFA0] transition-colors"
+                  >
+                    Visit Our YouTube Channel
+                  </a>
 
-                    <p className="text-[#1F3A5F]/60 text-xs mt-1">
-                      {testimonial.title} • {testimonial.location}
-                    </p>
-                  </div>
                 </div>
-              </FadeIn>
-            ))}
+
+              </div>
+            </FadeIn>
+
           </div>
         </div>
       </section>
+      {/* IMPACT STATS */}
+      <section className="py-24 bg-[#F9F7F4]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="font-heading text-3xl md:text-5xl font-semibold text-[#1F3A5F] tracking-tight">
+                Trusted by a Growing Community
+              </h2>
+
+              <p className="mt-6 text-lg text-[#1F3A5F]/75 max-w-2xl mx-auto leading-8">
+                Our commitment to structured financial education has empowered
+                learners across different backgrounds to develop confidence and
+                discipline in their investment journey.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.15}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+              <div className="bg-white rounded-2xl border border-[#E8E4DF] shadow-sm p-10 text-center hover:shadow-lg transition-all duration-300">
+
+                <h3 className="font-heading text-5xl font-bold text-[#1F3A5F] mb-3">
+                  1000+
+                </h3>
+
+                <p className="text-[#1F3A5F]/75 text-lg">
+                  Students Empowered
+                </p>
+
+              </div>
+
+              <div className="bg-white rounded-2xl border border-[#E8E4DF] shadow-sm p-10 text-center hover:shadow-lg transition-all duration-300">
+
+                <h3 className="font-heading text-5xl font-bold text-[#1F3A5F] mb-3">
+                  4.9/5
+                </h3>
+
+                <p className="text-[#1F3A5F]/75 text-lg">
+                  Average Rating
+                </p>
+
+              </div>
+
+              <div className="bg-white rounded-2xl border border-[#E8E4DF] shadow-sm p-10 text-center hover:shadow-lg transition-all duration-300">
+
+                <h3 className="font-heading text-5xl font-bold text-[#1F3A5F] mb-3">
+                  95%
+                </h3>
+
+                <p className="text-[#1F3A5F]/75 text-lg">
+                  Completion Rate
+                </p>
+
+              </div>
+
+            </div>
+          </FadeIn>
+
+        </div>
+      </section>
       {/* CTA */}
-      <section className="bg-[#1F3A5F] text-white py-16 md:py-24">
+      <section className="bg-[#1F3A5F] text-white py-20 md:py-24">
         <FadeIn>
           <div className="max-w-3xl mx-auto text-center px-6">
-            <h2 className="font-heading text-2xl md:text-4xl font-semibold tracking-tight mb-6">
+
+            <h2 className="font-heading text-3xl md:text-5xl font-semibold tracking-tight mb-6">
               Join Our Community of Disciplined Investors
             </h2>
 
-            <p className="text-gray-200 mb-8 md:mb-10">
-              Start your transformation journey with expert mentorship and
-              structured education.
+            <p className="text-gray-200 text-lg leading-8 mb-10">
+              Begin your investment journey with structured education,
+              practical insights, and expert mentorship designed to help you
+              make informed financial decisions with confidence.
             </p>
 
             <Link
@@ -282,9 +206,11 @@ export default function Testimonials() {
             >
               Enroll Now
             </Link>
+
           </div>
         </FadeIn>
       </section>
+
     </div>
   )
 }

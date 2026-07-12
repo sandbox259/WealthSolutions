@@ -36,7 +36,7 @@ export default function Footer() {
               info@niveshnirnay.com
             </p>
             <p className="text-gray-200 text-sm mt-2">
-              +91 XXXXXXXXXX
+              +91 8169305380
             </p>
           </div>
 

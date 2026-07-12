@@ -11,7 +11,7 @@ export default function Programs() {
       description:
         "A structured framework designed to help learners understand Gold and Silver market behavior, volatility concepts, and disciplined market participation strategies.",
       duration: "8 Weeks",
-      level: "Begineer",
+      level: "Beginner",
     },
   ]
 

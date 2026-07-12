@@ -18,19 +18,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/logo1.png',
+        url: '/niveshlogo.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/logo1.png',
+        url: '/niveshlogo.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/logo1.png',
+        url: '/niveshlogo.png',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/logo1.png',
+    apple: '/niveshlogo.png',
   },
 }
 

@@ -22,7 +22,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <p className="text-sm md:text-base text-[#D4AF37] font-semibold uppercase tracking-widest mb-4 md:mb-6">Nivesh Nirnay Solutions</p>
             <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-tight mb-4 md:mb-6">
-              Educate • Empower • Elevate
+              Learn First • Invest Later
             </h1>
             <p className="text-base sm:text-lg text-gray-100 leading-relaxed max-w-2xl mb-10 md:mb-12">
               Helping individuals develop financial awareness, market understanding and disciplined decisionmaking through structured educational programs across securities markets.
@@ -55,7 +55,7 @@ export default function Home() {
                   Who We Are
                 </h2>
                 <p className="text-[#1F3A5F] font-semibold mb-5 md:mb-6">
-                  My Wealth Solution is a financial education and market learning organization committed to
+                  Nivesh Nirnay Solutions is a financial education and market learning organization committed to
                   helping individuals understand various segments of the securities market through structured
                   educational frameworks.
                 </p>
