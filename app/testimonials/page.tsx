@@ -15,7 +15,7 @@ export default function Testimonials() {
           </h1>
 
           <p className="text-gray-200 max-w-2xl">
-            Hear from our communityof disciplined investors who transformed their financial future.
+            Hear from our community of disciplined investors who transformed their financial future.
           </p>
         </div>
       </section>
