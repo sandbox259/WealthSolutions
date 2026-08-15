@@ -1,9 +1,27 @@
-"use client"
-
 import React from "react"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Investment Education Services",
+
+  description:
+    "Explore investment education services from Nivesh Nirnay Solutions, including securities market education, commodity market learning, risk management and financial awareness.",
+
+  alternates: {
+    canonical: "https://niveshnirnaysolutions.in/services",
+  },
+
+  openGraph: {
+    title: "Investment Education Services | Nivesh Nirnay Solutions",
+    description:
+      "Investment education, market learning, risk management and financial awareness services.",
+    url: "https://niveshnirnaysolutions.in/services",
+    type: "website",
+  },
+};
 
 export default function Services() {
   const services = [

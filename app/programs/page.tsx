@@ -1,9 +1,28 @@
-"use client"
-
 import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
 import { ArrowRight } from "lucide-react"
 import { FaWhatsapp, FaInstagram} from "react-icons/fa6"
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Investment Education Programs",
+
+  description:
+    "Explore investment education and market learning programs from Nivesh Nirnay Solutions designed to build financial knowledge and disciplined decision-making.",
+
+  alternates: {
+    canonical: "https://niveshnirnaysolutions.in/programs",
+  },
+
+  openGraph: {
+    title: "Investment Education Programs | Nivesh Nirnay Solutions",
+    description:
+      "Investment education and market learning programs designed to build financial knowledge and disciplined decision-making.",
+    url: "https://niveshnirnaysolutions.in/programs",
+    type: "website",
+  },
+};
 
 export default function Programs() {
   const featuredPrograms = [

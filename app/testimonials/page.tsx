@@ -1,8 +1,27 @@
-"use client"
-
 import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
 import { FaYoutube } from "react-icons/fa6"
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Reviews & Success Stories",
+
+  description:
+    "Read experiences and feedback from learners who have participated in Nivesh Nirnay Solutions investment education and mentorship programs.",
+
+  alternates: {
+    canonical: "https://niveshnirnaysolutions.in/testimonials",
+  },
+
+  openGraph: {
+    title: "Reviews & Success Stories | Nivesh Nirnay Solutions",
+    description:
+      "Read experiences and feedback from learners of Nivesh Nirnay Solutions.",
+    url: "https://niveshnirnaysolutions.in/testimonials",
+    type: "website",
+  },
+};
 
 export default function Testimonials() {
   return (

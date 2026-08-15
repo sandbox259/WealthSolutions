@@ -1,7 +1,25 @@
-"use client"
-
 import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Investment Mentorship",
+
+  description:
+    "Learn about investment mentorship and market learning support from Nivesh Nirnay Solutions.",
+
+  alternates: {
+    canonical: "https://niveshnirnaysolutions.in/mentorship",
+  },
+
+  openGraph: {
+    title: "Investment Mentorship | Nivesh Nirnay Solutions",
+    description:
+      "Investment mentorship and market learning support from Nivesh Nirnay Solutions.",
+    url: "https://niveshnirnaysolutions.in/mentorship",
+    type: "website",
+  },
+};
 
 export default function Mentorship() {
 const reasons = [

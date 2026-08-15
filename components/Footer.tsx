@@ -33,7 +33,7 @@ export default function Footer() {
           <div>
             <h4 className="font-medium mb-3 md:mb-4">Contact</h4>
             <p className="text-gray-200 text-sm">
-              info@niveshnirnay.com
+              niveshnirnaysolutions@gmail.com
             </p>
             <p className="text-gray-200 text-sm mt-2">
               +91 8169305380

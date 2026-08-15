@@ -1,6 +1,26 @@
-'use client'
 import Link from "next/link"
 import FadeIn from "@/components/FadeIn"
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Nivesh Nirnay Solutions",
+
+  description:
+    "Learn about Nivesh Nirnay Solutions, our approach to investment education, market learning, financial awareness and disciplined decision-making.",
+
+  alternates: {
+    canonical: "https://niveshnirnaysolutions.in/about",
+  },
+
+  openGraph: {
+    title: "About Nivesh Nirnay Solutions",
+    description:
+      "Learn about Nivesh Nirnay Solutions and our approach to investment education and financial awareness.",
+    url: "https://niveshnirnaysolutions.in/about",
+    type: "website",
+  },
+};
 
 export default function About() {
   return (
